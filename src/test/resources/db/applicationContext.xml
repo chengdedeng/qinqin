@@ -19,7 +19,7 @@
     <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location">
-            <value>db.properties</value>
+            <value>db/db.properties</value>
         </property>
         <property name="fileEncoding" value="utf-8"/>
     </bean>
@@ -27,7 +27,7 @@
     <!-- ibatis3 工厂类 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="configLocation" value="classpath:sqlMapConfig.xml"/>
+        <property name="configLocation" value="classpath:db/sqlMapConfig.xml"/>
     </bean>
     <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory"/>

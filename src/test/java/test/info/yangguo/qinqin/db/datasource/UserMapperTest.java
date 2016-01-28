@@ -14,8 +14,7 @@ public class UserMapperTest{
 	
 	@Before
     public void before(){        
-		String[] xmls = new String[]{ "classpath:applicationContext.xml","classpath:dataSource.xml","classpath:applicationContext-tx.xml" };
-		//String[] xmls = new String[]{ "classpath:applicationContext.xml","classpath:dataSource.xml"};
+		String[] xmls = new String[]{ "classpath:db/applicationContext.xml","classpath:db/dataSource.xml","classpath:db/applicationContext-tx.xml" };
         ApplicationContext context = new ClassPathXmlApplicationContext(xmls);
         userMapper = (UserMapper) context.getBean("UserMapperImpl");
     }

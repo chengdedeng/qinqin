@@ -14,7 +14,7 @@
 		<setting name="useGeneratedKeys" value="false" />
 	</settings>
 	<mappers>
-		<mapper resource="org/springmore/core/dao/mapper/UserMapper.xml" />
+		<mapper resource="db/org/springmore/core/dao/mapper/UserMapper.xml" />
 	</mappers>
 
 </configuration>
