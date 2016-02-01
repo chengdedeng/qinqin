@@ -15,7 +15,7 @@
 	
 	<!-- 定义单个jdbc数据源的事务管理器 -->
 	<bean id="transactionManager"
-		class="test.info.yangguo.qinqin.db.DynamicDataSourceTransactionManager">
+		class="info.yangguo.qinqin.db.DynamicDataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	<!-- 以 @Transactional 标注来定义事务  -->
@@ -40,7 +40,7 @@
 	</tx:advice>
 	<!-- 那些类的哪些方法参与事务 -->
 	<aop:config>
-		<aop:pointcut id="allManagerMethod" expression="execution(* test.info.yangguo.qinqin.db.dao..*(..))" />
+		<aop:pointcut id="allManagerMethod" expression="execution(* info.yangguo.qinqin.db.dao..*(..))" />
 		<aop:advisor pointcut-ref="allManagerMethod" advice-ref="txAdvice" />
 	</aop:config>
 	

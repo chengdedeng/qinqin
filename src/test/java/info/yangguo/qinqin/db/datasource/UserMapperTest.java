@@ -1,11 +1,11 @@
-package test.info.yangguo.qinqin.db.datasource;
+package info.yangguo.qinqin.db.datasource;
 
-import test.info.yangguo.qinqin.db.domain.User;
+import info.yangguo.qinqin.db.domain.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import test.info.yangguo.qinqin.db.dao.UserMapper;
+import info.yangguo.qinqin.db.dao.UserMapper;
 
 
 public class UserMapperTest{

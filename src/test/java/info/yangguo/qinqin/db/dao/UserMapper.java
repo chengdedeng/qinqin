@@ -1,8 +1,8 @@
-package test.info.yangguo.qinqin.db.dao;
+package info.yangguo.qinqin.db.dao;
 
 import java.util.List;
 
-import test.info.yangguo.qinqin.db.domain.User;
+import info.yangguo.qinqin.db.domain.User;
 
 
 public interface UserMapper {

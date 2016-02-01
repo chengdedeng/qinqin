@@ -1,4 +1,4 @@
-package test.info.yangguo.qinqin.utils;
+package info.yangguo.qinqin.utils;
 
 import org.codehaus.jackson.JsonFactory;
 import org.codehaus.jackson.JsonGenerator;

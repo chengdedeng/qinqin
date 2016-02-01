@@ -1,4 +1,4 @@
-package test.info.yangguo.qinqin.db;
+package info.yangguo.qinqin.db;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

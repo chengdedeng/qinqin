@@ -13,7 +13,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
 		">
     <context:annotation-config/>
-    <context:component-scan base-package="test.info.yangguo.qinqin.db.dao"/>
+    <context:component-scan base-package="info.yangguo.qinqin.db.dao"/>
 
     <!-- spring的属性加载器，加载properties文件中的属性 -->
     <bean id="propertyConfigurer"
@@ -33,7 +33,7 @@
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
 
-    <bean id="dynamicSqlSessionTemplate" class="test.info.yangguo.qinqin.db.DynamicSqlSessionTemplate">
+    <bean id="dynamicSqlSessionTemplate" class="info.yangguo.qinqin.db.DynamicSqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionTemplate"/>
     </bean>
 

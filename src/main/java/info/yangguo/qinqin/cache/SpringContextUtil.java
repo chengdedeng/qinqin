@@ -1,4 +1,4 @@
-package test.info.yangguo.qinqin.cache;
+package info.yangguo.qinqin.cache;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

@@ -1,12 +1,12 @@
-package test.info.yangguo.qinqin.db.dao.impl;
+package info.yangguo.qinqin.db.dao.impl;
 
 import java.util.List;
 
-import test.info.yangguo.qinqin.db.domain.User;
-import test.info.yangguo.qinqin.db.DynamicSqlSessionTemplate;
+import info.yangguo.qinqin.db.domain.User;
+import info.yangguo.qinqin.db.DynamicSqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import test.info.yangguo.qinqin.db.dao.UserMapper;
+import info.yangguo.qinqin.db.dao.UserMapper;
 
 
 @Repository("UserMapperImpl")

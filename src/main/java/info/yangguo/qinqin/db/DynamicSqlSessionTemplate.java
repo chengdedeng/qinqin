@@ -1,4 +1,4 @@
-package test.info.yangguo.qinqin.db;
+package info.yangguo.qinqin.db;
 
 import static java.lang.reflect.Proxy.newProxyInstance;
 

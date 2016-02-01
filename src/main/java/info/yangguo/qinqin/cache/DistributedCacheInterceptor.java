@@ -1,4 +1,4 @@
-package test.info.yangguo.qinqin.cache;
+package info.yangguo.qinqin.cache;
 
 import com.google.common.collect.Maps;
 import com.google.common.hash.Hashing;
@@ -14,7 +14,7 @@ import org.springframework.data.redis.core.BoundValueOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.exceptions.JedisConnectionException;
-import test.info.yangguo.qinqin.utils.JsonUtil;
+import info.yangguo.qinqin.utils.JsonUtil;
 
 import javax.annotation.Resource;
 import java.util.Map;

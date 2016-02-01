@@ -1,4 +1,4 @@
-package test.info.yangguo.qinqin.cache;
+package info.yangguo.qinqin.cache;
 
 /**
  * Created by yangguo on 14-2-17.

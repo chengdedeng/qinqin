@@ -1,4 +1,4 @@
-package test.info.yangguo.qinqin.db.domain;
+package info.yangguo.qinqin.db.domain;
 
 import java.sql.Date;
 

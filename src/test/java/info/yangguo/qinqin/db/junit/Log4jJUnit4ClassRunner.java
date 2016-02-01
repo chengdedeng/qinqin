@@ -1,4 +1,4 @@
-package test.info.yangguo.qinqin.db.junit;
+package info.yangguo.qinqin.db.junit;
 
 import java.io.FileNotFoundException;
 

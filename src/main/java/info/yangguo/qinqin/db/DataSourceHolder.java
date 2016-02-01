@@ -1,4 +1,4 @@
-package test.info.yangguo.qinqin.db;
+package info.yangguo.qinqin.db;
 
 /**
  * 线程上下文的保存,主要是为了后面的数据源选择.

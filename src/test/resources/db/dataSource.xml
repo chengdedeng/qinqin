@@ -94,7 +94,7 @@
         <property name="jdbcInterceptors" value="${Tomcat.jdbc.pool.jdbcInterceptors}"></property>
     </bean>
 
-    <bean id="dataSource" class="test.info.yangguo.qinqin.db.DynamicDataSource">
+    <bean id="dataSource" class="info.yangguo.qinqin.db.DynamicDataSource">
         <property name="master" ref="master"/>
         <property name="slaves">
             <list>
