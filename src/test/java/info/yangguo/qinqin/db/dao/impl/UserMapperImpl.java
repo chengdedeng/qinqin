@@ -10,19 +10,18 @@ import info.yangguo.qinqin.db.dao.UserMapper;
 
 
 @Repository("UserMapperImpl")
-public class UserMapperImpl implements UserMapper{
-	
-	@Autowired
-	private DynamicSqlSessionTemplate sqlSessionTemplate;
+public class UserMapperImpl implements UserMapper {
 
-	public List<User> selectByUserNameAndPwd(User user) {
-		return sqlSessionTemplate.selectList("selectByUserNameAndPwd", user);
-	}
+    @Autowired
+    private DynamicSqlSessionTemplate sqlSessionTemplate;
 
-	public void insert(User user) {	
-		sqlSessionTemplate.insert("insert", user);
-		//Connection connection1 = sqlSessionTemplate.getConnection();
-		//Connection connection2 = sqlSessionTemplate.getConnection();
-		
-	}
+    public List<User> selectByUserNameAndPwd(User user) {
+        return sqlSessionTemplate.selectList("selectByUserNameAndPwd", user);
+    }
+
+    public void insert(User user) {
+        sqlSessionTemplate.insert("insert", user);
+        //Connection connection1 = sqlSessionTemplate.getConnection();
+        //Connection connection2 = sqlSessionTemplate.getConnection();
+    }
 }

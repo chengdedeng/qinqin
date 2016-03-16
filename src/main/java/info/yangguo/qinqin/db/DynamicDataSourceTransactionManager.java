@@ -17,13 +17,15 @@ public class DynamicDataSourceTransactionManager extends
 
     @Override
     protected void doBegin(Object transaction, TransactionDefinition definition) {
+        logger.info("~~~~~~~~~~~~~~~~~~~Transaction begin~~~~~~~~~~~~~~~~~~~");
         boolean readOnly = definition.isReadOnly();
         if (readOnly) {
             DataSourceHolder.setSlave();
+            logger.info("Slaver database is selected");
         } else {
             DataSourceHolder.setMaster();
+            logger.info("Master database is selected");
         }
-        logger.info("Transaction begin");
         super.doBegin(transaction, definition);
     }
 
@@ -31,6 +33,6 @@ public class DynamicDataSourceTransactionManager extends
     protected void doCleanupAfterCompletion(Object transaction) {
         super.doCleanupAfterCompletion(transaction);
         DataSourceHolder.clearDataSource();
-        logger.info("Transaction end");
+        logger.info("~~~~~~~~~~~~~~~~~~~Transaction end~~~~~~~~~~~~~~~~~~~");
     }
 }

@@ -15,9 +15,12 @@ import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 public class DynamicSqlSessionTemplate implements SqlSession {
+    private static Logger logger = LoggerFactory.getLogger(DynamicSqlSessionTemplate.class);
     private static final String SELECT = "select";
     private static final String INSERT = "insert";
     private static final String DELETE = "delete";
@@ -36,7 +39,7 @@ public class DynamicSqlSessionTemplate implements SqlSession {
 
     /**
      * 拦截SqlSessionTemplate的方法,从而进行读写分离
-     *
+     * <p/>
      * 注意:如果有事务,事务的入口已经选择了数据源,所以不需要做任何处理,非事务方法数据源的选择在此处完成.
      */
     private class SqlSessionInterceptor implements InvocationHandler {
@@ -51,11 +54,16 @@ public class DynamicSqlSessionTemplate implements SqlSession {
                 if (methodName.startsWith(SELECT)) {
                     //获取读集群的数据源
                     DataSourceHolder.setSlave();
+                    logger.info("Slaver database is selected");
                 } else if (methodName.startsWith(INSERT) ||
                         methodName.startsWith(UPDATE) ||
                         methodName.startsWith(DELETE)) {
                     //获取主库数据源
                     DataSourceHolder.setMaster();
+                    logger.info("Master database is selected");
+                } else {
+                    logger.error("The method name is incorrect");
+                    throw new RuntimeException();
                 }
                 Object result;
                 try {
