@@ -62,8 +62,7 @@ public class DynamicSqlSessionTemplate implements SqlSession {
                     DataSourceHolder.setMaster();
                     logger.info("Master database is selected");
                 } else {
-                    logger.error("The method name is incorrect");
-                    throw new RuntimeException();
+                    logger.warn("******************Use a more dangerous method({}), please double-check!******************",methodName);
                 }
                 Object result;
                 try {
